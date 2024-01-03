@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="asset/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/own_css/style.css">
+    <title>Desain In Aja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyUtFm70d5Vmk5Ltiq4bFbfMeq0u6L7Un"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI/t1fWCfDJcPfbDTfZ4buXs8C+aoU2W1P7cQGO8="
+        crossorigin="anonymous"></script>
+    
+        <style>
+          
+            .jumbotron {
+                background: url('BG.jpg') center/cover no-repeat; /* Ganti dengan path ke gambar latar belakang yang Anda inginkan */
+                color: #08fa30;
+                padding: 100px 0;
+                text-align: center;
+            }
+            .jumbotron h1 {
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            let lastScrollTop = 0;
+    
+            window.addEventListener("scroll", function () {
+                let st = window.pageYOffset || document.documentElement.scrollTop;
+                if (st > lastScrollTop) {
+                    // Scroll down
+                    document.querySelector("footer").classList.add("footer-hidden");
+                } else {
+                    // Scroll up
+                    document.querySelector("footer").classList.remove("footer-hidden");
+                }
+                lastScrollTop = st <= 0 ? 0 : st; // Mengatasi scroll ke atas yang berlebihan
+            });
+        </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container sm-auto">
+        <a class="navbar-brand text-center" href="#">Desain In Aja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav sm-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#paket">Paket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Jumbotron / Hero Section -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Desain In Aja (Web Ini Dibuat Untuk Memenuhi Tugas Mata Kuliah Manajemen Bisnis)</h1>
+        <p class="lead">Dari Ide Menjadi Desain, Dari Desain Menjadi Cuan</p>
+        <script>
+            $(document).ready(function () {
+                // Fungsi untuk menangani animasi dan navigasi
+                $("a[href^='#']").on('click', function (event) {
+                    var target = $(this.getAttribute('href'));
+                    if (target.length) {
+                        event.preventDefault();
+                        $('html, body').stop().animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                    }
+                });
+            });
+        </script>        
+        <a class="btn btn-primary btn-lg" href="#portofolio" role="button">Lihat Portofolio Kami</a>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container mt-5" id="paket">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Paket Sekolah</h2>
+                <img src="asset/img/school.jpg" alt="Sekolah" class="img-fluid mb-3">
+                <p>Paket sekolah biasanya dipilih sebagai pilihan yang paling dasar paket ini diperuntukkan untuk para pemula startup yang ingin membangun usahanya secara micro (biasanya diperuntukkan untuk tukang fotocopy yang baru merintis usaha dari nol)</p>
+                <p>yang didapatkan :</p>
+                <p>1. ide awal</p>
+                <p>2. dua kali revisi free</p>
+                <p>3. free satu slide banner dengan foto pemilik</p>
+                <b><p>Harga paket : Rp. 50.000 hingga Rp. 150.000</p></b>
+            </div>
+            <div class="col-lg-4">
+                <h2>Paket Starter</h2>
+                <img src="asset/img/starter.jpg" alt="Starter" class="img-fluid mb-3">
+                <p>Paket ini biasanya dipilih oleh perusahaan coffe shop yang ingin mendesain sebuah logo dan sebuah website untuk memasarkan usahanya, selain itu biasanya paket ini juga dipilih oleh mahasiswa untuk mendesain sebuah tugas dan kepada pengusaha kecil yang baru membuka cabang</p>
+                <p>yang didapatkan :</p>
+                <p>1. ide awal</p>
+                <p>2. tiga kali revisi free</p>
+                <p>3. free dua slide banner dengan foto pemilik</p>
+                <p>4. Free Konsultasi sebanyak 2 kali sebelum eksekusi pembuatan pesanan</p>
+                <b><p>Harga paket : Rp. 250.000 hingga Rp. 570.000</p></b>
+            </div>
+            <div class="col-lg-4">
+                <h2>Paket Premium</h2>
+                <img src="asset/img/premium.jpg" alt="Starter" class="img-fluid mb-3">
+                <p>Paket ini paling sering dipilih oleh customer karena dengan paket ini anda akan mendapatkan seluruh layanan yang ada pada paket sekolah dan paket starter beserta beberapa tambahan paket yang kami sediakan, biasanya paket ini dipilih oleh pengusaha yang memiliki beberapa cabang usaha</p>
+                <p>yang didapatkan :</p>
+                <p>1. ide awal</p>
+                <p>2. 10x revisi free</p>
+                <p>3. free 5 slide banner dengan foto pemilik</p>
+                <p>4. Free Konsultasi sebanyak 5 kali sebelum eksekusi pembuatan pesanan</p>
+                <p>5. Free Hosting selama 1 bulan (Jika diperlukan dan output berupa web) dengan domain my.id / sch.id </p>
+                <p>6. Include SSL (Jika Perlu Hosting)</p>
+                <p>Harga Desain Saja 570.000 tanpa output web, hosting, dan ssl <b>HANYA DESAIN</b></p>
+                <b><p>Harga BISA HUBUNGI KAMI JIKA INGIN DILENGKAPI HOSTING DAN SSL</p></b>
+            </div>
+        </div>
+    </div>
+
+   <!-- Portofolio Section -->
+<div class="container mt-5" id="portofolio">
+    <h2 class="text-center mb-4">Portofolio Kami</h2>
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <img src="project1.jpg" class="card-img-top" alt="Proyek 1">
+                <div class="card-body">
+                    <h5 class="card-title">Proyek 1</h5>
+                    <p class="card-text">Deskripsi proyek 1.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <img src="project2.jpg" class="card-img-top" alt="Proyek 2">
+                <div class="card-body">
+                    <h5 class="card-title">Proyek 2</h5>
+                    <p class="card-text">Deskripsi proyek 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <img src="project3.jpg" class="card-img-top" alt="Proyek 3">
+                <div class="card-body">
+                    <h5 class="card-title">Proyek 3</h5>
+                    <p class="card-text">Deskripsi proyek 3.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tambahkan lebih banyak kartu proyek sesuai kebutuhan -->
+    </div>
+</div>
+</div>
+<!-- Kontak Section -->
+<div class="container mt-5" id="kontak">
+    <h2 class="text-center mb-4">Hubungi Kami</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <p>Jika Anda memiliki pertanyaan atau membutuhkan layanan desain khusus, silakan hubungi kami.</p>
+            <p>Alamat: (Kantin DC Institut Teknologi Telkom Purwokerto / TUNC ) Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kidul, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53147</p>
+            <p>Email: info@desaininaja.com</p>
+            <p>Telepon: xxxx-xxxx-xxxx</p>
+            <p><b>HARAP HUBUNGI DAHULU SEBELUM MENEMUI</b></p>
+        </div>
+        <div class="col-lg-6">
+            <form>
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                </div>
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea class="form-control" id="pesan" rows="4" placeholder="Masukkan pesan Anda"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-1">
+        <p>&copy; Alfardhan, Habibie, Purnama, Rizky Ade, Hatha</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-4zrZn1EXOLBqZTtefUzqu47vdA1t64S8TAcbfqBM8QH/qumCMQqOCvNUtU8gW1x0"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyUtFm70d5Vmk5Ltiq4bFbfMeq0u6L7Un"
+        crossorigin="anonymous"></script>
+</body>
+</html>
